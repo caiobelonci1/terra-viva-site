@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <img 
-                src="/logo-terra-viva.png" 
+                src="/logo-terra-viva.png?v=2024" 
                 alt="Terra Viva" 
                 className={`transition-all duration-300 ${scrollY > 50 ? 'h-10 w-10' : 'h-14 w-14'}`}
               />
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
           <div className="mb-12 animate-fade-in">
             <div className="inline-block animate-float">
               <img 
-                src="/logo-terra-viva.png" 
+                src="/logo-terra-viva.png?v=2024" 
                 alt="Terra Viva" 
                 className="w-28 h-28 md:w-36 md:h-36 mx-auto mb-8 drop-shadow-2xl"
               />
@@ -557,9 +557,9 @@ const Home: React.FC = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <img 
-                  src="/logo-terra-viva-dark.png" 
+                  src="/logo-terra-viva.png?v=2024" 
                   alt="Terra Viva" 
-                  className="h-16 w-16"
+                  className="h-16 w-16 bg-white/10 rounded-full p-2"
                 />
                 <span className="text-2xl font-bold">Terra Viva</span>
               </div>
