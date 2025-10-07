@@ -1,5 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ChevronRight, MapPin, Building2, Users, Award, Phone, Mail, Clock, Shield, Trees, Construction, Check } from 'lucide-react';
+import { CountUp } from '../components/CountUp';
+import { ProjectCarousel } from '../components/ProjectCarousel';
+import { PhotoGallery } from '../components/PhotoGallery';
+import { PropertyMap } from '../components/PropertyMap';
 
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -178,15 +182,15 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Números do Sucesso com Animação */}
+      {/* Números do Sucesso com Animação e Contador */}
       <section className="py-24 bg-gradient-to-b from-white via-[#F5F5F0]/30 to-white" data-animate id="stats">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: <Clock className="w-10 h-10" />, number: '40+', label: 'Anos de História' },
-              { icon: <Users className="w-10 h-10" />, number: '1000+', label: 'Famílias Felizes' },
-              { icon: <Building2 className="w-10 h-10" />, number: '15+', label: 'Projetos Entregues' },
-              { icon: <Award className="w-10 h-10" />, number: '2', label: 'Empresas Consolidadas' },
+              { icon: <Clock className="w-10 h-10" />, number: 40, suffix: '+', label: 'Anos de História' },
+              { icon: <Users className="w-10 h-10" />, number: 1000, suffix: '+', label: 'Famílias Felizes' },
+              { icon: <Building2 className="w-10 h-10" />, number: 15, suffix: '+', label: 'Projetos Entregues' },
+              { icon: <Award className="w-10 h-10" />, number: 2, suffix: '', label: 'Empresas Consolidadas' },
             ].map((stat, index) => (
               <div 
                 key={index}
@@ -199,7 +203,7 @@ const Home: React.FC = () => {
                   {stat.icon}
                 </div>
                 <h3 className="text-5xl font-bold bg-gradient-to-r from-[#2C5F2D] to-[#1A4D1B] bg-clip-text text-transparent mb-3">
-                  {stat.number}
+                  {isVisible.stats ? <CountUp end={stat.number} suffix={stat.suffix} duration={2500} /> : '0'}
                 </h3>
                 <p className="text-gray-600 font-semibold text-lg">{stat.label}</p>
               </div>
@@ -409,6 +413,9 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Carrossel de Projetos */}
+      <ProjectCarousel />
+
       {/* Recanto Terra Viva - Seção Premium */}
       <section id="recanto" className="py-32 bg-gradient-to-b from-white to-[#F5F5F0]" data-animate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -483,6 +490,12 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Galeria de Fotos do Empreendimento */}
+      <PhotoGallery />
+
+      {/* Mapa Interativo da Propriedade */}
+      <PropertyMap />
 
       {/* Seção de Contato Premium */}
       <section id="contato" className="py-32 bg-gradient-to-br from-[#2C5F2D] via-[#1A4D1B] to-[#2C5F2D] text-white relative overflow-hidden">

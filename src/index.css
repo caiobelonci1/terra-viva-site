@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Swiper styles */
+@import 'swiper/swiper-bundle.css';
+
 * {
   box-sizing: border-box;
 }
