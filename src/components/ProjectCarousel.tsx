@@ -16,7 +16,7 @@ const projects: Project[] = [
     id: 1,
     title: 'Recanto Terra Viva',
     description: 'Loteamento fechado em Emilianópolis com lotes de 542m² a 1.000m². Infraestrutura completa: água, luz, asfalto e segurança.',
-    image: '/images/emilianopolis.png',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',
     location: 'Emilianópolis - SP',
     status: 'Lançamento'
   },

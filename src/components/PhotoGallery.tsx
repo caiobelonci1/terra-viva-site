@@ -10,8 +10,8 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    original: '/images/emilianopolis.png',
-    thumbnail: '/images/emilianopolis.png',
+    original: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200',
+    thumbnail: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=250',
     description: 'Vista aérea do Recanto Terra Viva - Emilianópolis'
   },
   {
