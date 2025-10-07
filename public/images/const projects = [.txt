@@ -1,0 +1,12 @@
+const projects = [
+  {
+    id: 1,
+    title: "Recanto Terra Viva",
+    location: "Emilianópolis, SP",
+    description: "35 lotes exclusivos de 542m² a 1000m² em meio à natureza preservada. O projeto mais aguardado do Grupo Terra Viva.",
+    image: "/images/recanto-aereo.png", // ✅ CORRIGIDO PARA .PNG
+    badge: "Lançamento",
+    features: ["35 lotes", "542m² - 1000m²", "Área de Lazer"]
+  },
+  // ...existing code...
+];

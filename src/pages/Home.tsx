@@ -435,7 +435,7 @@ const Home: React.FC = () => {
             {/* Imagem de Destaque */}
             <div className="relative h-[60vh] overflow-hidden">
               <img 
-                src="/images/recanto-aereo.jpg" 
+                src="/images/emilianopolis.png" 
                 alt="Recanto Terra Viva - Vista Aérea"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
