@@ -559,7 +559,7 @@ const Home: React.FC = () => {
                 <img 
                   src="/logo-terra-viva.png?v=2024" 
                   alt="Terra Viva" 
-                  className="h-16 w-16 bg-white/10 rounded-full p-2"
+                  className="h-16 w-16 bg-white rounded-full p-1"
                 />
                 <span className="text-2xl font-bold">Terra Viva</span>
               </div>
