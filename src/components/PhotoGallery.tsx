@@ -10,13 +10,13 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    original: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200',
-    thumbnail: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=250',
+    original: '/images/recanto-aereo.jpg',
+    thumbnail: '/images/recanto-aereo.jpg',
     description: 'Vista aérea do Recanto Terra Viva - Emilianópolis'
   },
   {
-    original: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200',
-    thumbnail: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=250',
+    original: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200',
+    thumbnail: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=250',
     description: 'Infraestrutura completa com asfalto e iluminação'
   },
   {

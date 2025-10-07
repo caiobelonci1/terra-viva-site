@@ -16,7 +16,7 @@ const projects: Project[] = [
     id: 1,
     title: 'Recanto Terra Viva',
     description: 'Loteamento fechado em Emilianópolis com lotes de 542m² a 1.000m². Infraestrutura completa: água, luz, asfalto e segurança.',
-    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',
+    image: '/images/recanto-aereo.jpg',
     location: 'Emilianópolis - SP',
     status: 'Lançamento'
   },
@@ -32,16 +32,16 @@ const projects: Project[] = [
     id: 3,
     title: 'Jardim das Acácias',
     description: 'Loteamento urbano com 120 lotes, próximo a escolas e comércio. Ideal para construir seu lar ou investir.',
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800',
     location: 'Álvares Machado - SP',
     status: 'Últimas Unidades'
   },
   {
     id: 4,
-    title: 'Portal do Sol',
-    description: 'Lotes comerciais estrategicamente localizados na principal avenida da cidade. Perfeito para seu negócio prosperar.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800',
-    location: 'Presidente Prudente - SP',
+    title: 'Loteamento Serra Azul',
+    description: 'Localização privilegiada próxima a São Bernardo do Campo. Lotes com excelente infraestrutura e fácil acesso às principais vias.',
+    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800',
+    location: 'Região de São Bernardo do Campo - SP',
     status: 'Disponível'
   }
 ];

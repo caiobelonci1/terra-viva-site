@@ -435,8 +435,8 @@ const Home: React.FC = () => {
             {/* Imagem de Destaque */}
             <div className="relative h-[60vh] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" 
-                alt="Recanto Terra Viva"
+                src="/images/recanto-aereo.jpg" 
+                alt="Recanto Terra Viva - Vista Aérea"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
