@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { ChevronRight, MapPin, Building2, Users, Award, Phone, Mail, Clock, Shield, Trees, Construction, Check } from 'lucide-react';
+import { ChevronRight, MapPin, Building2, Users, Award, Phone, Mail, Clock, Shield, Trees, Construction, Check, Sun, Zap } from 'lucide-react';
 import { CountUp } from '../components/CountUp';
 import { ProjectCarousel } from '../components/ProjectCarousel';
 import { PhotoGallery } from '../components/PhotoGallery';
@@ -317,95 +317,194 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Fascínio Planejados - Banner Especial */}
-      <section className="py-24 bg-gradient-to-br from-[#C9A961] via-[#B8984E] to-[#C9A961] relative overflow-hidden">
+      {/* Ecossistema Veritas Home */}
+      <section id="empresas" className="py-24 bg-gradient-to-br from-[#2C5F2D] via-[#1A4D1B] to-[#2C5F2D] relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -ml-48 -mt-48"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mb-48"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -ml-48 -mt-48"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mb-48"></div>
         
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/95 backdrop-blur-lg rounded-[3rem] overflow-hidden shadow-2xl">
-            <div className="grid md:grid-cols-2 gap-0">
-              {/* Conteúdo */}
-              <div className="p-12 lg:p-16 flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 bg-[#C9A961]/10 px-4 py-2 rounded-full mb-6 w-fit">
-                  <Award className="w-5 h-5 text-[#C9A961]" />
-                  <span className="text-[#C9A961] font-semibold">Novidade</span>
-                </div>
-                
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#2C5F2D]" style={{fontFamily: "'Playfair Display', serif"}}>
-                  Fascínio Planejados
-                </h2>
-                
-                <p className="text-xl text-gray-600 mb-4 leading-relaxed">
-                  Conheça nossa nova plataforma digital com projetos exclusivos de móveis planejados.
-                </p>
-                
-                <p className="text-lg text-gray-500 mb-8">
-                  Design sofisticado, funcionalidade e qualidade Fascínio Ambientes em cada detalhe.
-                </p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Título da Seção */}
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{fontFamily: "'Playfair Display', serif"}}>
+              Ecossistema Veritas Home
+            </h2>
+            <p className="text-xl md:text-2xl text-white/80 font-light max-w-3xl mx-auto">
+              Quatro empresas especialistas: da base à inovação, a jornada completa da casa
+            </p>
+          </div>
 
-                <div className="space-y-4 mb-8">
-                  {[
-                    '🏠 Projetos 3D Interativos',
-                    '✨ Ambientes Personalizados',
-                    '🎨 Acabamentos Premium',
-                    '📐 Consultoria Especializada'
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 text-gray-700">
-                      <div className="w-2 h-2 bg-[#C9A961] rounded-full"></div>
-                      <span className="font-medium">{item}</span>
+          {/* Grid de 4 Empresas */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Terra Viva - Card 1 */}
+            <div className="group relative bg-white/95 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(201,169,97,0.3)] transition-all duration-700 hover:-translate-y-2">
+              <div className="p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#C9A961] to-[#B8984E] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <Trees className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="inline-block bg-[#C9A961]/10 px-3 py-1 rounded-full mb-2">
+                      <span className="text-sm font-semibold text-[#C9A961]">A BASE</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#2C5F2D] mb-2" style={{fontFamily: "'Playfair Display', serif"}}>
+                      Terra Viva Construtora
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Loteamentos de alto padrão em Presidente Prudente e Oeste Paulista. Mais de 40 anos criando as melhores localizações.
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-2 mb-6">
+                  {['Loteamentos alto padrão', 'Condomínio fechado 24h', 'Terrenos de luxo'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                      <Check className="w-4 h-4 text-[#C9A961] flex-shrink-0" />
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="https://fascinio-ambiente-design.lovable.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C9A961] to-[#B8984E] text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
-                  >
-                    <span>Visite o Site</span>
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                  
-                  <a 
-                    href="https://wa.me/5518997213968?text=Quero%20conhecer%20o%20Fascínio%20Planejados"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-[#C9A961] text-[#C9A961] rounded-full font-bold hover:bg-[#C9A961] hover:text-white transition-all duration-300"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>WhatsApp</span>
-                  </a>
-                </div>
+                <a 
+                  href="#recanto"
+                  className="inline-flex items-center gap-2 text-[#C9A961] font-semibold hover:gap-3 transition-all group/link"
+                >
+                  <span>Ver Loteamentos</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
               </div>
+            </div>
 
-              {/* Imagem/Preview */}
-              <div className="relative h-full min-h-[400px] md:min-h-[600px] bg-gradient-to-br from-[#F5F5F0] to-white p-8 flex items-center justify-center">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#C9A961]/20 to-transparent"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-6">
-                      <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                        <Award className="w-16 h-16 text-[#C9A961]" />
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-5xl font-bold text-[#2C5F2D]" style={{fontFamily: "'Playfair Display', serif"}}>
-                          Fascínio
-                        </p>
-                        <p className="text-2xl text-[#C9A961] font-semibold">Planejados</p>
-                        <p className="text-gray-600 max-w-xs mx-auto">
-                          Transformando espaços em ambientes únicos desde 1980
-                        </p>
-                      </div>
-                      <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-semibold text-gray-700">Site Online</span>
-                      </div>
+            {/* Fascínio Ambientes - Card 2 */}
+            <div className="group relative bg-white/95 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(201,169,97,0.3)] transition-all duration-700 hover:-translate-y-2">
+              <div className="p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#C9A961] to-[#B8984E] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="inline-block bg-[#C9A961]/10 px-3 py-1 rounded-full mb-2">
+                      <span className="text-sm font-semibold text-[#C9A961]">A ALMA</span>
                     </div>
+                    <h3 className="text-2xl font-bold text-[#2C5F2D] mb-2" style={{fontFamily: "'Playfair Display', serif"}}>
+                      Fascínio Ambientes
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Design de interiores sofisticado e móveis planejados de luxo. 40+ anos transformando espaços em ambientes únicos.
+                    </p>
                   </div>
                 </div>
+                <div className="space-y-2 mb-6">
+                  {['Móveis planejados luxo', 'Design de interiores', 'Projetos exclusivos'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                      <Check className="w-4 h-4 text-[#C9A961] flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="https://fascinio-ambiente-design.lovable.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#C9A961] font-semibold hover:gap-3 transition-all group/link"
+                >
+                  <span>Visitar Site</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
               </div>
+            </div>
+
+            {/* Laser Boss - Card 3 */}
+            <div className="group relative bg-white/95 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(201,169,97,0.3)] transition-all duration-700 hover:-translate-y-2">
+              <div className="p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#C9A961] to-[#B8984E] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="inline-block bg-[#C9A961]/10 px-3 py-1 rounded-full mb-2">
+                      <span className="text-sm font-semibold text-[#C9A961]">A INOVAÇÃO</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#2C5F2D] mb-2" style={{fontFamily: "'Playfair Display', serif"}}>
+                      Laser Boss
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Corte a laser de precisão milimétrica para acabamentos de luxo em madeira e painéis decorativos personalizados.
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-2 mb-6">
+                  {['Corte a laser precisão', 'Acabamentos de luxo', 'Painéis decorativos'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                      <Check className="w-4 h-4 text-[#C9A961] flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="https://wa.me/5518997213968?text=Quero%20conhecer%20a%20Laser%20Boss"
+                  className="inline-flex items-center gap-2 text-[#C9A961] font-semibold hover:gap-3 transition-all group/link"
+                >
+                  <span>Falar no WhatsApp</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Veritas Solar - Card 4 */}
+            <div className="group relative bg-white/95 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(201,169,97,0.3)] transition-all duration-700 hover:-translate-y-2">
+              <div className="p-8">
+                <div className="flex items-start gap-6 mb-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#C9A961] to-[#B8984E] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+                    <Sun className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="inline-block bg-[#C9A961]/10 px-3 py-1 rounded-full mb-2">
+                      <span className="text-sm font-semibold text-[#C9A961]">SUSTENTÁVEL</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#2C5F2D] mb-2" style={{fontFamily: "'Playfair Display', serif"}}>
+                      Veritas Solar
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Energia solar residencial com instalação de placas solares e sistema fotovoltaico completo para sua casa autossuficiente.
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-2 mb-6">
+                  {['Energia solar residencial', 'Sistema fotovoltaico', 'Casa autossuficiente'].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                      <Check className="w-4 h-4 text-[#C9A961] flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="https://wa.me/5518997213968?text=Quero%20conhecer%20a%20Veritas%20Solar"
+                  className="inline-flex items-center gap-2 text-[#C9A961] font-semibold hover:gap-3 transition-all group/link"
+                >
+                  <span>Falar no WhatsApp</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Principal do Ecossistema */}
+          <div className="mt-16 text-center">
+            <div className="inline-block bg-white/95 backdrop-blur-lg rounded-3xl px-12 py-8 shadow-2xl">
+              <p className="text-2xl font-bold text-[#2C5F2D] mb-4" style={{fontFamily: "'Playfair Display', serif"}}>
+                Conheça o Ecossistema Completo
+              </p>
+              <p className="text-gray-600 mb-6 max-w-2xl">
+                Da escolha do terreno perfeito até o último detalhe do design, acompanhamos você em toda a jornada.
+              </p>
+              <a 
+                href="https://veritas-home-ecosystem.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C9A961] to-[#B8984E] text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+              >
+                <span>Explore o Grupo Veritas Home</span>
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
         </div>
